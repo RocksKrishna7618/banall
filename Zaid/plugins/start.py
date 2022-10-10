@@ -18,7 +18,7 @@ async def start(event):
              caption=PM_START_TEXT.format(event.sender.first_name), 
              buttons=[
         [Button.url("👨‍💻 ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", "https://github.com/ITZ-ZAID/Telethon-Music")],
-        [Button.url("🗣️ ꜱᴜᴘᴘᴏʀᴛ", f"https://t.me/TheSupportChat"), Button.url("📣 ᴜᴘᴅᴀᴛᴇꜱ", f"t.me/TheUpdatesChannel")],
+        [Button.url("🗣️ ꜱᴜᴘᴘᴏʀᴛ", f"https://t.me/TheSupportChat"), Button.url("📣 ᴜᴘᴅᴀᴛᴇꜱ", f"t.me/TheUpdatesChannel")]]
        return
 
     if event.is_group:
@@ -26,5 +26,4 @@ async def start(event):
        return
 
 
-HANDLER.append(stac)
 HANDLER.append(start)
