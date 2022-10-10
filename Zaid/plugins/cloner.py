@@ -4,7 +4,6 @@ from config import API_ID, API_HASH
 import sys
 import telethon
 
-
 @Zaid.on(events.NewMessage(pattern="^[?!/]clone"))
 async def clone(msg):
     chat = msg.chat_id
