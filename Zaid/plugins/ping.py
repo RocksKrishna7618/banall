@@ -7,7 +7,7 @@ from datetime import datetime
 
 from telethon import Button, events
 
-from Zaid import HANDLER
+from Zaid import HANDLER, SUDO_USERS
 
 START_TIME = datetime.utcnow()
 TIME_DURATION_UNITS = (
@@ -31,6 +31,8 @@ async def _human_time_duration(seconds):
 
 @events.register(events.NewMessage(pattern="^/ping"))
 async def ping(event):
+   if not event.sender_id in SUDO_USERS:
+      return
    start = time()
    current_time = datetime.utcnow()
    delta_ping = time() - start
