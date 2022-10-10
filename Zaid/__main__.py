@@ -1,4 +1,4 @@
-from Zaid import Zaid
+from Zaid import Zaid, HANDLER
 import glob
 from pathlib import Path
 from Zaid.utils import load_plugins
@@ -12,5 +12,8 @@ for name in files:
         load_plugins(plugin_name.replace(".py", ""))
 
 if __name__ == "__main__":
+    print("[INFO]: ADDING HANDLERS!")
+    for cmd in HANDLER:
+        Zaid.add_event_handler(cmd)
     print("[INFO]: SUCCESSFULLY STARTED BOT!")
     Zaid.run_until_disconnected()
