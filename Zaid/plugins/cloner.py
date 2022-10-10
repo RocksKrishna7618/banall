@@ -1,6 +1,6 @@
 from Zaid import HANDLER, Zaid
 from telethon import TelegramClient, events
-from config import
+from config import API_ID, API_HASH
 import sys
 
 @Zaid.on(events.NewMessage(pattern="^[?!/]clone"))
